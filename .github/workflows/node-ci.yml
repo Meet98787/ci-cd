@@ -25,12 +25,12 @@ jobs:
       run: npm install
 
     # Step 4: Run tests (optional - can be skipped if you don’t have tests yet)
-    # - name: Run tests
-    #   run: npm test
+    - #name: Run tests
+      #run: npm test
 
     # Step 5: Build Docker image
     - name: Build Docker image
-      run: docker build -t meetlakhani99/my-node .
+      run: docker build -t your-dockerhub-username/my-node-app .
 
     # Step 6: Log in to DockerHub
     - name: Log in to DockerHub
@@ -42,5 +42,5 @@ jobs:
     # Step 7: Tag and push Docker image to DockerHub
     - name: Push Docker image to DockerHub
       run: |
-        docker tag meetlakhani99/my-node-app meetlakhani99/my-node-app:latest
-        docker push meetlakhani99/my-node-app:latest
+        docker tag your-dockerhub-username/my-node-app your-dockerhub-username/my-node-app:latest
+        docker push your-dockerhub-username/my-node-app:latest
